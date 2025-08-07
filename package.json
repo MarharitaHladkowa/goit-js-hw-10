@@ -4,8 +4,9 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    git add ."dev": "vite",
     "build": "vite build --base=/vanilla-app-template/",
+    "push": "git add . && git commit -m \"auto commit\" && git push",
     "preview": "vite preview"
   },
   "devDependencies": {
