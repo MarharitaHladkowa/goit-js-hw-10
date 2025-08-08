@@ -16,3 +16,162 @@
 @import url('./badges.css');
 @import url('./back-link.css');
 @import url('./footer.css');
+/* Визначаємо головну навігацію */
+main .main-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(
+    135deg,
+    #1a237e,
+    #263238
+  ); /* Темний синій і чорний градієнт */
+  font-family: 'Inter', sans-serif;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  flex-wrap: wrap;
+  gap: 40px;
+  position: relative;
+  z-index: 1;
+  box-shadow: inset 0 0 15px #b3e5fc; /* М’який голубий внутрішній відблиск */
+}
+
+/* Стилюємо посилання */
+main .main-nav li a {
+  text-decoration: none;
+  color: #2e7d32; /* Світло-зелений текст (ніжний контраст) */
+  font-size: 24px;
+  padding: 20px 40px;
+  border: 2px solid #a5d6a7; /* М’який зелений контур */
+  border-radius: 20px;
+  background: linear-gradient(
+    135deg,
+    #e0f7fa,
+    #d3e2f5
+  ); /* Світлі синій і пастельний підсвіт */
+  box-shadow: 0 0 10px #a5d6a7, 0 0 20px #a5d6a7; /* М’який відблиск */
+  transition: all 0.4s ease-in-out;
+  position: relative;
+  z-index: 1;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  cursor: pointer;
+  text-shadow: 0 0 2px #d3e2f5; /* М’який відблиск тексту */
+}
+
+/* Ефект при наведенні */
+main .main-nav li a:hover {
+  background: linear-gradient(135deg, #d3e2f5, #e0f7fa); /* Зміна градієнта */
+  box-shadow: 0 0 15px #a5d6a7, 0 0 25px #a5d6a7; /* М’який відблиск */
+  transform: scale(1.05) rotate(1deg); /* Збільшення та поворот */
+  filter: brightness(1.1); /* Слегка збільшена яскравість */
+}
+
+/* Ефект "пульса" при активізації */
+main .main-nav li a.active {
+  animation: pulse 1.5s ease-in-out infinite;
+  box-shadow: 0 0 20px #a5d6a7, 0 0 30px #a5d6a7;
+  filter: brightness(1.2); /* Більш яскравий вигляд */
+}
+
+/* Анимація світла */
+@keyframes glow {
+  from {
+    box-shadow: 0 0 5px #a5d6a7, 0 0 10px #a5d6a7;
+  }
+  to {
+    box-shadow: 0 0 10px #a5d6a7, 0 0 20px #a5d6a7;
+  }
+}
+
+/* Анимація пульса */
+@keyframes pulse {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.03) rotate(0.5deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+/* Обертка всего таймера */
+.timer-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background-color: #f0f2f5;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Поле ввода даты */
+.timer-input {
+  padding: 8px 12px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.timer-input:focus {
+  border-color: #3b82f6;
+}
+
+/* Кнопка запуска таймера */
+.timer-btn {
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background-color: #3b82f6;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.timer-btn:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.timer-btn:hover:not(:disabled) {
+  background-color: #2563eb;
+}
+
+/* Контейнер с цифрами */
+.timer {
+  display: flex;
+  gap: 20px;
+}
+
+.timer .field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  min-width: 80px;
+}
+
+.timer .value {
+  font-size: 32px;
+  font-weight: bold;
+  color: #111827;
+}
+
+.timer .label {
+  font-size: 14px;
+  color: #6b7280;
+  text-transform: uppercase;
+  margin-top: 5px;
+}

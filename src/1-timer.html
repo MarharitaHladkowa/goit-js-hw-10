@@ -2,20 +2,18 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page 2</title>
+    <title>Countdown Timer</title>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <main>
-      <div class="container">
-        <h1 class="main-title">
-          <span class="main-title-gradient">Welcome</span> to page 2
-        </h1>
+    <div class="timer-wrapper">
+      <div>
+        <input type="text" id="datetime-picker" class="timer-input" />
+        <button type="button" data-start class="timer-btn" disabled>
+          Start
+        </button>
       </div>
-      <input type="text" id="datetime-picker" />
-      <button type="button" data-start>Start</button>
 
       <div class="timer">
         <div class="field">
@@ -35,6 +33,7 @@
           <span class="label">Seconds</span>
         </div>
       </div>
-    </main>
+    </div>
+    <script type="module" src="./JS/1-timer.js"></script>
   </body>
 </html>
