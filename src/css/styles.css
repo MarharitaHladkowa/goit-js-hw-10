@@ -175,3 +175,92 @@ main .main-nav li a.active {
   text-transform: uppercase;
   margin-top: 5px;
 }
+body.page-snackbar {
+  background: linear-gradient(135deg, #fbe6d4, #ffd6a5); /* тёплый градиент */
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Контейнер формы */
+.form-container {
+  background: #fffaf3;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  max-width: 400px;
+  width: 100%;
+}
+
+/* Заголовок */
+.main-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.main-title-gradient {
+  background: linear-gradient(90deg, #ff6a00, #ffb347);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Стили формы */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form label {
+  display: flex;
+  flex-direction: row; /* Змініть на row */
+  align-items: center; /* Підготуйте елементи по центру */
+  gap: 0.5rem; /* Додайте простір між радіо-кнопкою та текстом */
+  font-weight: bold;
+  color: #333;
+}
+
+.form input[type='number'],
+.form input[type='radio'] {
+  margin-top: 0;
+  margin-right: 0.5rem; /* Простір між радіо-кнопкою та текстом */
+}
+
+.form fieldset {
+  display: flex;
+  flex-direction: row; /* Змініть на row */
+  gap: 1rem; /* Додайте простір між елементами */
+  border: 2px solid #ff9a3c;
+  border-radius: 10px;
+  padding: 1rem;
+  background: #fff5eb;
+}
+
+/* Подсветка формы */
+.form input[type='number']:focus,
+.form input[type='radio']:focus {
+  outline: 2px solid #ff7b00;
+  box-shadow: 0 0 8px rgba(255, 123, 0, 0.6);
+}
+
+/* Кнопка */
+.form button {
+  padding: 0.8rem;
+  font-size: 1rem;
+  background: linear-gradient(90deg, #ff7b00, #ffb347);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 123, 0, 0.4);
+}
